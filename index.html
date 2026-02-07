@@ -8,16 +8,35 @@
 </head>
 <body>
   <main id="app" data-state="idle">
-    <div id="dot" role="button" aria-label="Primary interaction point"></div>
+    <!-- Primary interaction element -->
+    <div
+      id="dot"
+      role="button"
+      aria-label="Primary interaction point"
+      tabindex="0"
+    ></div>
 
+    <!-- States containers -->
     <section id="search" aria-label="Search"></section>
+
     <section id="dialogs" aria-label="Dialogs"></section>
-    <section id="chat" aria-label="Chat"></section>
+
+    <section id="chat" aria-label="Chat">
+      <div class="input-zone">
+        <button aria-label="Attach">+</button>
+        <input
+          type="text"
+          aria-label="Message input"
+          autocomplete="off"
+        >
+      </div>
+    </section>
+
     <aside id="functions" aria-label="Functions"></aside>
+
     <aside id="profile" aria-label="Profile"></aside>
   </main>
 
-  <!-- JS подключается ПОСЛЕ DOM -->
   <script src="app.js"></script>
 </body>
 </html>
