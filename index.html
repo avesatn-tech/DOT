@@ -7,20 +7,17 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main id="app">
+  <main id="app" data-state="idle">
     <div id="dot" role="button" aria-label="Primary interaction point"></div>
 
     <section id="search" aria-label="Search"></section>
-
     <section id="dialogs" aria-label="Dialogs"></section>
-
     <section id="chat" aria-label="Chat"></section>
-
     <aside id="functions" aria-label="Functions"></aside>
-
-    <aside id="settings" aria-label="Settings"></aside>
+    <aside id="profile" aria-label="Profile"></aside>
   </main>
 
+  <!-- JS подключается ПОСЛЕ DOM -->
   <script src="app.js"></script>
 </body>
 </html>
