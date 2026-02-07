@@ -99,3 +99,42 @@ html, body {
   font-size: 20px;
   cursor: pointer;
 }
+/* --- DOT base motion --- */
+#dot {
+  transition:
+    transform 180ms ease,
+    opacity 180ms ease;
+}
+
+/* --- IDLE --- */
+#app[data-state="idle"] #dot {
+  transform: translateY(-50%) scale(1);
+  opacity: 1;
+}
+
+/* --- DIALOGS: slight drift down --- */
+#app[data-state="dialogs"] #dot {
+  transform: translateY(calc(-50% + 24px)) scale(1);
+}
+
+/* --- SEARCH: pull left, focus --- */
+#app[data-state="search"] #dot {
+  transform: translate(-12px, -50%) scale(0.9);
+}
+
+/* --- CHAT: dot becomes secondary, sinks down --- */
+#app[data-state="chat"] #dot {
+  transform: translateY(calc(-50% + 160px)) scale(0.8);
+  opacity: 0.7;
+}
+
+/* --- FUNCTIONS: subtle emphasis --- */
+#app[data-state="functions"] #dot {
+  transform: translateY(calc(-50% - 24px)) scale(1.05);
+}
+
+/* --- PROFILE: retreat --- */
+#app[data-state="profile"] #dot {
+  transform: translateY(-50%) scale(0.75);
+  opacity: 0.5;
+}
