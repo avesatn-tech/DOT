@@ -9,33 +9,37 @@
 <body>
   <main id="app">
 
-    <!-- Primary interaction point -->
-    <div id="dot" role="button" aria-label="Primary interaction point"></div>
+    <div
+      id="dot"
+      role="button"
+      aria-label="Primary interaction point"
+    ></div>
 
-    <!-- Search -->
     <section id="search" aria-label="Search"></section>
 
-    <!-- Dialogs -->
     <section id="dialogs" aria-label="Dialogs"></section>
 
-    <!-- Chat -->
     <section id="chat" aria-label="Chat">
       <div id="messages"></div>
+
       <div id="composer">
-        <input type="text" aria-label="Message input">
-        <button aria-label="Send message"></button>
+        <input
+          type="text"
+          aria-label="Message input"
+        >
+        <button
+          aria-label="Send message"
+        ></button>
       </div>
     </section>
 
-    <!-- Functions -->
     <aside id="functions" aria-label="Functions"></aside>
 
-    <!-- Settings / Profile -->
     <aside id="settings" aria-label="Settings"></aside>
 
   </main>
 
-  <!-- Firebase SDK -->
+  <!-- Firebase (compat, no modules) -->
   <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
 
